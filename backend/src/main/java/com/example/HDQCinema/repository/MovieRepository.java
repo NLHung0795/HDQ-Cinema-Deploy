@@ -37,6 +37,5 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     Movie findMovieById(Long id);
     //join Cinema c on c.id = ?2
 
-    @EntityGraph(attributePaths = {"showtimes.room"})
     List<Movie> findAll();
 }
